@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/28306820/README.md)
 # Dashboard ejecutivo · Camiones pesados España
 
 Dashboard HTML, CSS y JavaScript para analizar matriculaciones de camiones pesados nuevos en España durante enero-abril de 2026, con foco en Volvo Trucks y comparativa frente al mismo periodo de 2025.
@@ -64,11 +63,13 @@ Al importar el repositorio en Vercel, usa estos ajustes:
 
 - Framework Preset: `Other`.
 - Root Directory: la carpeta del repositorio donde estan `package.json` e `index.html`.
-- Install Command: `npm install`.
-- Build Command: `npm run build`.
-- Output Directory: `dist`.
+- Install Command: vacio.
+- Build Command: vacio.
+- Output Directory: `public`.
 
-Si ves `404: NOT_FOUND`, normalmente Vercel esta apuntando a una carpeta equivocada o no esta encontrando el `index.html` generado. Revisa especialmente `Root Directory` y `Output Directory`.
+El repositorio incluye `vercel.json`, que fuerza este despliegue como sitio estatico puro y sirve `public/index.html`.
+
+Si ves `404: NOT_FOUND`, normalmente Vercel esta apuntando a una carpeta equivocada o no esta encontrando `public/index.html`. Revisa especialmente `Root Directory`: debe ser la carpeta donde estan `vercel.json`, `package.json` y la carpeta `public/`.
 
 ## Exportar a GitHub
 
@@ -77,6 +78,8 @@ Archivos que deben subirse:
 - Codigo fuente: `index.html`, `styles.css`, `app.js`, `scripts/`.
 - Datos necesarios: `data/matriculaciones_camiones_pesados.xlsx`, `data/dashboard_data.json` y `data/dashboard_data.js`.
 - Assets: `assets/volvo-logo.avif`.
+- Vendor frontend: `vendor/chart.umd.js`.
+- Publicacion estatica Vercel: `public/`.
 - Configuracion: `package.json`, `package-lock.json`, `.gitignore`, `.gitattributes` y `.nojekyll`.
 - Vercel: `vercel.json`.
 
